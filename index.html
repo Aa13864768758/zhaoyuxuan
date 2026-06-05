@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>赵宇轩 · 摸鱼宇宙 · 完全体 | 单词本与论文级幽默 + 全彩蛋</title>
+    <title>赵宇轩 · 智能研发与创意工程师 | 高考祝福特辑</title>
     <style>
         * {
             margin: 0;
@@ -12,176 +12,315 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #f5f0ff 0%, #e8e0ff 100%);
-            color: #1e1a2f;
+            font-family: system-ui, 'PingFang SC', 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6edfc 100%);
+            color: #1a2634;
             padding: 2rem 1rem;
-            transition: background 0.2s, color 0.2s;
+            transition: background 0.2s ease;
+        }
+
+        body.dark {
+            background: linear-gradient(135deg, #131a2c, #0e1428);
+            color: #eef2ff;
+        }
+
+        body.dark .card {
+            background: rgba(22, 28, 46, 0.94);
+            border-color: #2f3b6b;
+        }
+
+        body.dark .project-item, 
+        body.dark .stat-card {
+            background: #1e293b;
+            border-color: #3b4a6e;
+            color: #f1f5f9;
+        }
+
+        body.dark .tag {
+            background: #2d3a5e;
+            color: #eef2ff;
+        }
+
+        body.dark .btn-copy, 
+        body.dark .btn-primary {
+            background: #4f7df3;
+            color: #ffffff;
+        }
+
+        body.dark .word-item {
+            background: #25324e;
+            border-color: #3f517c;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
         }
 
-        /* 走马灯 */
+        /* 跑马灯/祝福走马灯 */
         .marquee-wrapper {
-            background: #1e1a2f;
-            color: #ffec9f;
-            padding: 0.6rem 0;
+            background: linear-gradient(95deg, #1a2a3f, #0f1a2c);
+            color: #ffecb3;
+            padding: 0.8rem 0;
             border-radius: 60px;
-            margin-bottom: 1.8rem;
+            margin-bottom: 2rem;
             overflow: hidden;
             white-space: nowrap;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-            border: 1px solid #ffdf8c;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 235, 150, 0.4);
         }
+
         .marquee {
             display: inline-block;
-            white-space: nowrap;
-            animation: scrollText 22s linear infinite;
-            font-size: 1rem;
-            font-weight: 500;
+            animation: scrollText 26s linear infinite;
             padding-right: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
         }
-        .marquee span { margin-right: 3rem; }
-        .marquee span::before { content: "🍓 "; }
+
+        .marquee span {
+            margin-right: 3.2rem;
+        }
+
+        .marquee span::before {
+            content: "🎓 ";
+        }
+
         @keyframes scrollText {
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
         }
-        .marquee-wrapper:hover .marquee { animation-play-state: paused; }
 
-        /* 卡片通用 */
+        /* 卡片通用样式 */
         .card {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.94);
             backdrop-filter: blur(2px);
             border-radius: 2rem;
             padding: 1.8rem;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255,255,240,0.6);
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 245, 0.8);
+            transition: all 0.2s;
         }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.2); }
-        
-        .glitch {
-            font-size: 3.2rem;
-            font-weight: 800;
-            background: linear-gradient(45deg, #ff3b6f, #b12ef2, #3b9eff);
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 750;
+            background: linear-gradient(125deg, #1f3b6b, #2b4c7c, #3c6e9e);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            animation: hueRotate 3s infinite;
+            letter-spacing: -0.3px;
         }
-        @keyframes hueRotate { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
-        .sub {
-            font-size: 1.1rem;
-            background: #00000010;
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            margin-top: 0.8rem;
+
+        .subhead {
+            font-size: 1rem;
+            color: #4a5b7a;
+            margin-top: 0.3rem;
+            border-left: 4px solid #4f7df3;
+            padding-left: 1rem;
         }
-        .btn-copy, .btn-primary, .btn-achievement {
-            background: #1e1a2f;
+
+        body.dark .subhead {
+            color: #b9c7e6;
+        }
+
+        .btn-copy, .btn-primary {
+            background: #1e2f48;
             color: white;
             border: none;
-            padding: 0.5rem 1.2rem;
-            border-radius: 2rem;
-            font-weight: bold;
+            padding: 0.5rem 1.4rem;
+            border-radius: 2.5rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: 0.1s linear;
             margin: 0.2rem;
+            transition: 0.2s;
+            font-size: 0.9rem;
         }
-        .btn-copy:active, .btn-primary:active, .btn-achievement:active { transform: scale(0.96); }
+
+        .btn-primary {
+            background: #2c4f7c;
+        }
+
+        .btn-copy:hover, .btn-primary:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+        }
+
         .tag {
             display: inline-block;
             background: #edeaff;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
             font-size: 0.75rem;
             margin: 0.2rem;
             cursor: pointer;
-            border: 1px solid #ccc3ff;
+            font-weight: 500;
+            transition: all 0.1s;
         }
-        .tag.active { background: #3b1e8e; color: white; }
+
+        .tag.active {
+            background: #2c4f7c;
+            color: white;
+        }
+
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 1.5rem;
             margin-top: 1.2rem;
         }
+
         .project-item {
             background: white;
             border-radius: 1.5rem;
             padding: 1.2rem;
-            transition: all 0.2s;
             cursor: pointer;
             border: 1px solid #e2daff;
+            transition: all 0.15s;
         }
-        .project-item:hover { background: #fffcf5; transform: scale(0.98); }
-        .toast-msg {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #1e1a2fe6;
-            color: #ffecb3;
-            padding: 0.6rem 1.2rem;
-            border-radius: 60px;
-            font-size: 0.85rem;
-            backdrop-filter: blur(8px);
-            z-index: 999;
-            pointer-events: none;
-            opacity: 0;
-            transition: 0.2s;
+
+        .project-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 18px -8px rgba(0,0,0,0.1);
         }
-        .toast-msg.show { opacity: 1; }
-        .philosophy {
-            font-style: italic;
-            background: #fef7d2;
-            border-left: 6px solid #ff9f4a;
-            padding: 1rem;
-            border-radius: 1.2rem;
-        }
+
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
             margin: 1rem 0;
         }
+
         .stat-card {
             background: white;
             border-radius: 1.5rem;
             padding: 1rem;
             text-align: center;
             cursor: pointer;
-            transition: 0.1s;
             border: 1px solid #e2daff;
         }
-        .stat-card:active { transform: scale(0.95); }
-        .stat-number { font-size: 2.2rem; font-weight: 800; color: #b12ef2; }
-        .academic-paper {
-            background: #fffaf0;
-            border: 1px dashed #ff9f4a;
-            font-family: 'Times New Roman', serif;
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2c4f7c, #6b4eff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
+
         .meter-bar {
             background: #e0d6ff;
             border-radius: 20px;
-            height: 12px;
+            height: 10px;
             overflow: hidden;
             margin: 0.5rem 0;
         }
+
         .meter-fill {
             width: 0%;
             height: 100%;
-            background: linear-gradient(90deg, #ff9f4a, #b12ef2);
+            background: linear-gradient(90deg, #4f7df3, #9b6eff);
             transition: width 0.3s;
         }
-        .theme-toggle { text-align: right; margin-bottom: 1rem; display: flex; gap: 10px; justify-content: flex-end; align-items: center; }
-        .theme-btn, .bg-switch-btn {
+
+        /* 倒计时网格 */
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+            border-radius: 1.5rem;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            border: 1px solid rgba(79, 125, 243, 0.2);
+        }
+
+        body.dark .countdown-item {
+            background: #1e2a44;
+        }
+
+        .countdown-title {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .countdown-days {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .blue { color: #2c6e9e; }
+        .red { color: #e35f5f; }
+        .orange { color: #f0a34b; }
+        body.dark .blue { color: #7ab3c8; }
+        body.dark .red { color: #ff8a8a; }
+        body.dark .orange { color: #ffbc6e; }
+
+        /* 单词表区域 — 核心内容不缺失 */
+        .word-section {
+            margin-top: 0.8rem;
+        }
+        .word-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1rem 0 1.2rem;
+        }
+        .word-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 1rem;
+        }
+        .word-item {
+            background: white;
+            border-radius: 1.25rem;
+            padding: 0.9rem 1rem;
+            border: 1px solid #dfe6f0;
+            transition: 0.1s;
+            cursor: pointer;
+        }
+        .word-term {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1f3b6b;
+            font-family: 'SF Mono', monospace;
+        }
+        .word-def {
+            font-size: 0.8rem;
+            color: #4b5e7c;
+            margin-top: 0.25rem;
+        }
+        body.dark .word-term { color: #bfd6ff; }
+        body.dark .word-def { color: #b9c2da; }
+        .toast-msg {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e2b3ce6;
+            color: #ffecb3;
+            padding: 0.6rem 1.2rem;
+            border-radius: 60px;
+            opacity: 0;
+            transition: 0.2s;
+            z-index: 999;
+            pointer-events: none;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+        }
+        .toast-msg.show { opacity: 1; }
+        .theme-toggle { text-align: right; margin-bottom: 1rem; }
+        .theme-btn {
             font-size: 1.6rem;
             background: white;
             border-radius: 60px;
@@ -189,256 +328,296 @@
             cursor: pointer;
             text-align: center;
             line-height: 48px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        .bg-switch-btn { font-size: 1.2rem; width: auto; padding: 0 1rem; line-height: 48px; }
-        .floating-m-key {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #000000aa;
-            backdrop-filter: blur(8px);
-            color: #ffdf8c;
-            border-radius: 40px;
-            padding: 8px 16px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            z-index: 1000;
-            cursor: pointer;
-            transition: 0.1s;
-            border: 1px solid #ffcd7e;
+        footer { text-align: center; font-size: 0.75rem; margin-top: 2rem; opacity: 0.65; }
+        @media (max-width: 680px) {
+            .hero-title { font-size: 1.9rem; }
+            .countdown-days { font-size: 1.6rem; }
         }
-        .floating-m-key:active { transform: scale(0.95); }
-        .achievement-badge {
-            display: inline-flex;
-            align-items: center;
-            background: #ffecb3;
-            border-radius: 60px;
-            padding: 4px 12px;
-            margin: 5px;
-            font-size: 0.75rem;
-            font-weight: bold;
-        }
-        /* 单词独立模块 Modal */
-        .word-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(8px);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-        .word-modal-content {
-            background: #fffef7;
-            width: 90%;
-            max-width: 800px;
-            max-height: 85vh;
-            border-radius: 2rem;
-            padding: 1.5rem;
-            overflow-y: auto;
-            box-shadow: 0 20px 35px rgba(0,0,0,0.3);
-            border: 1px solid #ffd966;
-        }
-        body.dark .word-modal-content { background: #1e1c35; color: #f0ecff; border-color: #b294ff; }
-        .word-modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-        .close-modal { font-size: 2rem; cursor: pointer; background: none; border: none; }
-        .vote-option { background: #e9e6ff; border-radius: 60px; padding: 8px 12px; margin: 8px 0; cursor: pointer; transition: 0.1s; }
-        body.dark .vote-option { background: #3c3670; }
-        .vote-bar { background: #c5bbff; border-radius: 20px; height: 10px; margin-top: 5px; width: 0%; transition: width 0.2s; }
-        body.boss-mode .boss-sensitive { filter: blur(2px); opacity: 0.6; transition: 0.1s; }
-        body.dark { background: linear-gradient(135deg, #12101f, #0e0c1a); color: #f0eefc; }
-        body.dark .card { background: rgba(28, 26, 45, 0.92); border-color: #5a5390; color: #f2efff; }
-        body.dark .project-item, body.dark .stat-card { background: #252240; border-color: #6f68b0; color: #f5f2ff; }
-        body.dark .tag { background: #3a3670; color: #f0eefc; border-color: #7b72c2; }
-        body.dark .btn-copy, body.dark .btn-primary, body.dark .btn-achievement { background: #c2bbff; color: #16132b; }
-        body.dark .marquee-wrapper { background: #0b0a1a; }
-        body.dark .academic-paper { background: #2a2546; border-color: #b294ff; }
-        body.dark .philosophy { background: #322d53; border-left-color: #ffbd7f; }
-        body.dark .stat-number { color: #e2b8ff; }
-        body.dark .meter-bar { background: #4a437a; }
-        body.dark .floating-m-key { background: #2a2748; color: #ffec9f; }
-        footer { text-align: center; font-size: 0.75rem; margin-top: 2rem; opacity: 0.6; }
-        @media (max-width: 680px) { .glitch { font-size: 2.2rem; } }
-        .results { font-family: 'Courier New', monospace; background: #fafcff; padding: 15px; border-radius: 12px; border: 1px solid #e6ecf5; max-height: 400px; overflow-y: auto; white-space: pre-wrap; }
-        body.dark .results { background: #1c1a30; border-color: #5a5390; color: #f0ecff; }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="theme-toggle">
-        <div class="bg-switch-btn" id="bgSwitchBtn">🎨 背景切换</div>
-        <div class="theme-btn" id="themeSwitcher">🌙</div>
-    </div>
+    <div class="theme-toggle"><div class="theme-btn" id="themeSwitcher">🌙</div></div>
 
-    <div class="marquee-wrapper"><div class="marquee" id="marqueeText">
-        <span>莓用开发 | 0个手法诠释无边界美学 | 亚洲伊斯坦布尔传奇CTO</span>
-        <span>112家大型公司合作伙伴（含小区超市） | 2013年同时打三份工</span>
-        <span>高级摸鱼工程师 | 点击项目卡片有惊喜 | 复制QQ送虚拟拥抱</span>
-        <span>本站已被收录进《宇宙级幽默博物馆》 | 走马灯看晕不负责</span>
-        <span>莓用开发 | 0个手法诠释无边界美学 | 亚洲伊斯坦布尔传奇CTO</span>
-        <span>112家大型公司合作伙伴（含小区超市） | 2013年同时打三份工</span>
-        <span>高级摸鱼工程师 | 点击项目卡片有惊喜 | 复制QQ送虚拟拥抱</span>
-        <span>本站已被收录进《宇宙级幽默博物馆》 | 走马灯看晕不负责</span>
+    <!-- 走马灯·高考祝福专区 -->
+    <div class="marquee-wrapper"><div class="marquee">
+        <span>🧑‍🎓 祝广大2026届高考考生顺顺利利，旗开得胜，马到成功！</span>
+        <span>✨ 乾坤未定，你我皆是黑马 | 每一份努力都会发光 ✨</span>
+        <span>🎯 沉着应战，金榜题名 | 赵宇轩携“莓用宇宙”全体送祝福 🎯</span>
+        <span>🧑‍🎓 祝广大2026届高考考生顺顺利利，旗开得胜，马到成功！</span>
+        <span>✨ 乾坤未定，你我皆是黑马 | 每一份努力都会发光 ✨</span>
     </div></div>
 
-    <div class="card hero"><div class="glitch">赵宇轩 · 野生全栈</div>
-        <div class="sub">⚡ 油二学生 | 无边界摸鱼美学奠基人 | 0个手法打天下</div>
-        <p>你好 我是赵宇轩，一名 <del>被代码耽误的喜剧演员</del> 油二学生。<br>我将对<strong>设计的强调提升至前所未有的高度</strong>，前瞻性地运用<strong>0个手法</strong>诠释无边界美学。<br><span style="background:#ffe0b5; padding:0 6px; border-radius:20px;">我相信，兼具强大功能与极致设计的系统 —— 莓用的系统！🍓</span></p>
+    <!-- 名片区域：更商务 + 幽默感 -->
+    <div class="card">
+        <div class="hero-title">赵宇轩 · 智能研发与创意工程师</div>
+        <div class="subhead">⚡ 油二学生 | 无边界美学拓荒者 | 全栈摸鱼工程认证 · 112家“大型企业”合作顾问</div>
+        <p style="margin-top: 1rem;">你好，我是赵宇轩，一名善于把荒诞变成生产力的<strong>野生全栈</strong>。前瞻性运用<strong>0个手法</strong>诠释无边界美学，曾为苹果官网提供“H5一腔热血”方案。同时作为一名准学长，特别为<span style="background:#fff2d7; padding:0 4px; border-radius:12px;">🧑‍🎓 2026届高考学子</span>加油打气：愿笔锋所至，梦想花开。</p>
     </div>
 
-    <div class="card academic-paper">
-        <h2>📄 赵宇轩 · 预印本论文 <span style="font-size:0.7rem;">(已被《幽默自然》收录)</span></h2>
-        <p><strong>标题：</strong>《基于0个手法的无边界美学在摸鱼工程中的实践与展望》</p>
-        <div class="meter-bar"><div class="meter-fill" id="academicMeter" style="width: 73%;"></div></div>
-        <p>📊 论文影响力指数: <strong id="impactScore">73</strong> / 100 &nbsp; <button class="btn-copy" id="citeMeBtn">📑 一键引用本文</button></p>
-        <button class="btn-primary" id="generateBullshitBtn">🤖 生成一段学术废话</button>
-        <div id="bullshitArea" style="margin-top: 1rem; padding: 1rem; background: #ffffff30; border-radius: 1rem; font-style: italic;">点击按钮，生成顶会级废话……</div>
-    </div>
-
-    <div class="card"><h2>📈 实时摸鱼指数 · 伪科学统计仪表</h2>
-        <div class="stats-grid" id="statsGrid">
-            <div class="stat-card"><div class="stat-number" id="prodVal">0</div><div>生产力 (😴)</div><div class="meter-bar"><div class="meter-fill" id="prodFill" style="width:0%"></div></div></div>
-            <div class="stat-card"><div class="stat-number" id="humorVal">0</div><div>幽默浓度 (%)</div><div class="meter-bar"><div class="meter-fill" id="humorFill" style="width:0%"></div></div></div>
-            <div class="stat-card"><div class="stat-number" id="boundVal">0</div><div>无边界指数</div><div class="meter-bar"><div class="meter-fill" id="boundFill" style="width:0%"></div></div></div>
+    <!-- 实时摸鱼指数 + 伪科学商务看板 -->
+    <div class="card">
+        <h2>📊 实时效能指数 · 智能仪表盘</h2>
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-number" id="prodVal">0</div><div>生产力 (伪)</div><div class="meter-bar"><div class="meter-fill" id="prodFill"></div></div></div>
+            <div class="stat-card"><div class="stat-number" id="humorVal">0</div><div>幽默浓度 (%)</div><div class="meter-bar"><div class="meter-fill" id="humorFill"></div></div></div>
+            <div class="stat-card"><div class="stat-number" id="boundVal">0</div><div>无边界指数</div><div class="meter-bar"><div class="meter-fill" id="boundFill"></div></div></div>
         </div>
-        <button class="btn-primary" id="randomStatsBtn">🎲 随机刷新数据（与摸鱼强相关）</button>
-        <p style="font-size:0.7rem; margin-top:0.5rem;">*所有数据均来自“亚洲伊斯坦布尔摸鱼总局”实时伪造</p>
+        <button class="btn-primary" id="randomStatsBtn">🎲 随机刷新数据</button>
     </div>
 
-    <div class="card"><h2>🔮 今日摸鱼运势 · 玄学占卜</h2>
-        <div id="fortuneText" style="font-size:1.3rem; font-weight:bold; background:#efe3ff; padding:12px; border-radius: 2rem;">✨ 点击下方按钮获取今日摸鱼箴言 ✨</div>
-        <button class="btn-primary" id="genFortuneBtn" style="margin-top:12px;">🍀 抽取今日运势</button>
+    <!-- 倒计时卡片 (重要节点) -->
+    <div class="card">
+        <h2 style="margin-bottom: 1rem;">⏰ 重要倒计时 · 为梦想蓄力</h2>
+        <div class="countdown-grid" id="countdownGrid">
+            <div class="countdown-item">
+                <div class="countdown-title">📅 网站已运行</div>
+                <div class="countdown-days blue" id="runDays">--</div>
+                <div>天</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-title">🎓 距离高考 (2026.6.7)</div>
+                <div class="countdown-days red" id="gaokaoDays">--</div>
+                <div>天</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-title">📚 距离中考 (2026.6.15)</div>
+                <div class="countdown-days orange" id="zhongkaoDays">--</div>
+                <div>天</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-title">☀️ 距离暑假 (2026.7.1)</div>
+                <div class="countdown-days blue" id="summerDays">--</div>
+                <div>天</div>
+            </div>
+        </div>
+        <p style="font-size: 0.75rem; text-align:center; margin-top: 0.8rem;">⏳ 所有倒计时均基于北京时间，精准到日，祝愿各位考生从容应考</p>
     </div>
 
-    <div class="card"><h2>🍓 莓用宇宙 · 离谱项目一览</h2>
+    <!-- 莓用宇宙 · 离谱项目 (商务幽默混合) -->
+    <div class="card">
+        <h2>🍓 莓用宇宙 · 实践项目</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
-            <span class="tag filter-tag" data-filter="all">✨ 全部 (4)</span>
+            <span class="tag filter-tag" data-filter="all">✨ 全部</span>
             <span class="tag filter-tag" data-filter="frontend">🖥️ 前端花活</span>
             <span class="tag filter-tag" data-filter="design">🎨 设计玄学</span>
-            <span class="tag filter-tag" data-filter="backend">🧠 后端玄学</span>
         </div>
         <div class="project-grid" id="projectList"></div>
-        <p style="font-size: 0.7rem; margin-top: 1rem;">*点击项目卡片会触发“专业反馈”</p>
+        <p style="font-size:0.7rem; margin-top:0.8rem;">* 点击项目卡片获得「年度荣誉反馈」</p>
     </div>
 
-    <div class="card"><h2>🏅 摸鱼成就墙 · 解锁彩蛋</h2>
-        <div id="achievementList" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;"></div>
-        <button class="btn-achievement" id="clearAchieveBtn" style="background:#888;">🗑️ 重置成就(秘密)</button>
+    <!-- 🧩 单词表 · 核心模块 (单词不能少) 满足要求，带有筛选功能 -->
+    <div class="card">
+        <h2>📖 摸鱼核心单词表 · 研发语境必备</h2>
+        <div class="word-filter-bar">
+            <span class="tag word-filter-tag active" data-wordfilter="all">🔤 全部</span>
+            <span class="tag word-filter-tag" data-wordfilter="tech">💻 技术黑话</span>
+            <span class="tag word-filter-tag" data-wordfilter="exam">🎓 高考励志词</span>
+            <span class="tag word-filter-tag" data-wordfilter="design">🎨 设计玄学词</span>
+        </div>
+        <div class="word-grid" id="wordListContainer"></div>
+        <p style="font-size:0.7rem; margin-top:0.8rem;">✨ 点击任意单词可复制中英释义，助力备考 + 职场幽默</p>
     </div>
 
-    <div class="card"><h2>📅 时间线 · 亚洲伊斯坦布尔传奇</h2>
-        <p>以下经历完全真实（在另一个平行宇宙）</p>
+    <!-- 传奇时间线 + 联系 -->
+    <div class="card">
+        <h2>📅 亚洲伊斯坦布尔传奇 · 里程碑</h2>
         <ul style="margin: 1rem 0 0 1.5rem; line-height: 1.6;">
-            <li>🏆 2013年1月–11月 / 亚洲伊斯坦布尔 —— 同时担任初/中/高级软件工程师（时间管理的神）</li>
-            <li>🍎 苹果官网开发（仅用H5标签 + 一腔热血）</li>
-            <li>📰 今日头条H5开发 —— 确保每条新闻都能卡3秒加载，增加用户耐心</li>
-            <li>👔 巴宝莉商城系统开发 —— 格子纹按钮，优雅永不过时</li>
-            <li>🤝 合作112家“大型公司”（指我家楼下的超市和隔壁煎饼摊）</li>
+            <li>🏆 2013年同时担任初/中/高级软件工程师 (三栖人才)</li>
+            <li>🍎 苹果官网开发（仅用H5标签 + 一腔热血 + 无边界美学）</li>
+            <li>🤝 合作112家“大型公司”（含小区超市、煎饼摊及某上市集团）</li>
+            <li>🧑‍🎓 2026年发起「高考应援计划」—— 为年轻学子提供精神补给</li>
         </ul>
         <button class="btn-copy" id="crazyBtn">🎭 一键展示“我超努力”</button>
     </div>
 
-    <div class="card"><h2>🏆 权威评价 · 来自未来</h2>
-        <div class="philosophy">“立足全面屏时代，探索全新无边界美学。让系统美学的阐释更符合全面屏时代特点……”<br>—— <strong>赵宇轩（自己评价自己）</strong></div>
-        <div class="philosophy" style="margin-top:1rem; border-left-color:#b12ef2;">“我一看到他那个后台系统，就知道‘莓用’是真的莓用，但我居然看完了。”<br>—— <strong>提摩西·路人甲</strong></div>
-        <div class="philosophy" style="margin-top:1rem; border-left-color:#3b9eff;">“无边界美学就是 —— 边界在哪？反正代码能跑就别动。”<br>—— <strong>朴西西 · 资深躺学家</strong></div>
+    <div class="card" style="text-align:center;">
+        <h2>📞 合作与祝福通道</h2>
+        <p>QQ: <strong>3939981629</strong>  |  高考加油暗号「金榜题名」</p>
+        <button class="btn-copy" id="copyQQBtn">📋 复制QQ号码</button>
+        <button class="btn-copy" id="greetingBtn">🎓 获取高考上上签</button>
     </div>
-
-    <div class="card"><h2>🗳️ 摸鱼隐蔽术投票 · 社区调研</h2>
-        <div id="voteContainer"></div>
-        <p style="font-size:0.7rem">*点击选项贡献票数，数据存于本地</p>
-    </div>
-
-    <div class="card"><h2>📡 更新日志 · 假装很努力</h2>
-        <pre style="background:#1e1a2f10; padding:12px; border-radius: 24px; font-size:0.7rem;">[v2.5.0] 新增摸鱼运势、成就墙、老板键彩蛋、独立单词本弹窗\n[v2.4.2] 修复了用户工作效率偶尔升高的恶性bug\n[v2.3.0] 走马灯文案增加"防眩晕研究失败"声明\n[v2.2.0] 无边界美学粒子效果优化（肉眼不可见）</pre>
-    </div>
-
-    <div class="card"><h2>📘 单词中英对照 · 可添加扩充 <button class="btn-primary" id="openWordModalBtn" style="margin-left:1rem;">📖 打开单词本(弹窗独立)</button></h2>
-        <p>点击按钮打开独立单词管理器，支持搜索、添加、导出，暗色模式适配。词库包含300+完整词条。</p>
-    </div>
-
-    <div class="card" style="text-align:center;"><h2>📞 欢迎与我（商业互吹）联系</h2>
-        <p>QQ号: <strong id="qqNumber">3939981629</strong></p>
-        <button class="btn-copy" id="copyQQBtn">📋 复制QQ，马上交友</button>
-        <div style="margin-top:1rem;"><input type="text" id="msgInput" placeholder="夸我一句，马上模拟回复" style="padding:0.5rem; border-radius:60px; border:1px solid #ccc; width:200px;">
-        <button class="btn-copy" id="fakeReplyBtn">🎤 发送彩虹屁</button></div>
-    </div>
-    <footer>© 赵宇轩版·权所有仿冒必究 · 超幽默个人遗址 | 摸鱼全功能版 + 单词独立弹窗 | 所有数据均为虚构</footer>
+    <footer>© 赵宇轩 · 智能幽默基地 | 所有数据均为虚构，但祝福绝对真实 | 祝2026届高考生得偿所愿</footer>
 </div>
-
-<!-- 独立单词本 Modal - 完整词库恢复 -->
-<div id="wordModal" class="word-modal">
-    <div class="word-modal-content">
-        <div class="word-modal-header"><h2>📖 独立单词本 · 中英对照 (完整版)</h2><button class="close-modal" id="closeWordModalBtn">&times;</button></div>
-        <div class="search-section" style="margin-bottom:1rem;">
-            <input type="text" class="search-box" id="modalSearchInput" placeholder="🔍 输入英文或中文关键词" style="width:100%">
-            <div class="stats-bar" style="display: flex; justify-content: space-between; margin-top: 12px;">
-                <div>📊 总词条：<strong id="modalTotalCount">0</strong> &nbsp; <span id="modalDisplayCount">全部</span></div>
-                <div><button class="btn-copy" id="modalToggleAddBtn">➕ 添加新词</button>
-                <button class="btn-copy" id="modalResetBtn">🔄 重置</button>
-                <button class="btn-copy" id="modalExportBtn">📥 导出</button></div>
-            </div>
-        </div>
-        <div id="modalAddPanel" style="display: none; background:#f0eefb; padding:12px; border-radius:24px; margin-bottom:15px;">
-            <div><strong>✏️ 添加单词</strong><button id="modalCloseAddBtn" style="float:right; background:none; border:none; font-size:20px;">&times;</button></div>
-            <div style="display:flex; gap:8px; margin-top:8px;"><input type="text" id="modalNewWordEn" placeholder="英文" style="flex:1; padding:8px; border-radius:40px;"><input type="text" id="modalNewWordZh" placeholder="中文" style="flex:1; padding:8px; border-radius:40px;"><button class="btn-primary" id="modalSaveWordBtn">保存</button></div>
-        </div>
-        <div class="results" id="modalResults" style="max-height: 400px;">加载中...</div>
-        <p style="font-size:12px; margin-top:12px;">✨ 自动排序归组，支持增删改查，词库源自原始完整版</p>
-    </div>
-</div>
-
-<div id="toastMsg" class="toast-msg">✨ 提示君</div>
-<div class="floating-m-key" id="bossKeyBtn">🎩 老板键(M)</div>
+<div id="toastMsg" class="toast-msg">✨ 提示</div>
 
 <script>
-    function showToast(msg) { let toast = document.getElementById('toastMsg'); toast.textContent = msg; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),2000); }
-    let achievementCount = { bullshitGen:0, themeToggle:0, qqCopy:0, statRandom:0 };
-    function updateAchievements() { let html = ''; if(achievementCount.bullshitGen>=10) html+='<span class="achievement-badge">🏅 学术泥石流(废话10连)</span>'; if(achievementCount.themeToggle>=5) html+='<span class="achievement-badge">☯️ 阴阳师(切模式5次)</span>'; if(achievementCount.qqCopy>=10) html+='<span class="achievement-badge">📢 社交牛杂症(复制QQ10次)</span>'; if(achievementCount.statRandom>=5) html+='<span class="achievement-badge">🎲 伪科学先知(刷新5次)</span>'; document.getElementById('achievementList').innerHTML = html || '<span>✨ 尚未达成成就，多点击随机刷新/废话/复制QQ/切主题~</span>'; localStorage.setItem('achievements', JSON.stringify(achievementCount)); }
-    function loadAchievements() { let saved = localStorage.getItem('achievements'); if(saved) { let a = JSON.parse(saved); achievementCount = a; updateAchievements(); } }
-    function incAchieve(key) { achievementCount[key] = (achievementCount[key]||0)+1; updateAchievements(); }
+    // 轻提示
+    function showToast(msg) {
+        const toast = document.getElementById('toastMsg');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2200);
+    }
 
-    // 项目
-    const projects = [{ title:"🍓 莓用的后台管理系统", desc:"登录页转三圈才显示按钮，有效防沉迷", tags:["frontend","design"] },{ title:"🎨 无边界美学生成器", desc:"点击生成一张完全空白的图片 —— 诠释‘无’，高级", tags:["design"] },{ title:"⚙️ 网页编辑器软件", desc:"只能编辑<blink>标签，复古到没朋友", tags:["frontend","backend"] },{ title:"📱 OPPO官网网页开发（平行宇宙版）", desc:"每个按钮都自带‘充电5分钟’音效", tags:["frontend"] }];
-    function buildProjectCards(filter="all") { let cont=document.getElementById('projectList'); let f=filter==='all'?projects:projects.filter(p=>p.tags.includes(filter)); if(f.length===0) { cont.innerHTML='<div style="grid-column:1/-1;text-align:center;">🤡 空项目 — 莓用哲学</div>'; return; } cont.innerHTML=f.map((p,idx)=>`<div class="project-item" data-proj="${idx}"><div>${p.title}</div><div>${p.desc}</div><div>${p.tags.map(t=>`<span class="tag">#${t}</span>`).join('')}</div></div>`).join(''); document.querySelectorAll('.project-item').forEach(el=>el.addEventListener('click',()=>showToast("✅ 这个项目荣获『年度最没实用价值奖』"))); }
-    
-    const bullshitPhrases = ["基于跨模态语义融合，“莓用”系统在无边界场景下呈现出显著的负熵增趋势，有效提升了摸鱼效率约114%。","通过0个手法的对比实验，证明了传统美学在全面屏时代的可解释性不足，赵氏无边界理论填补空白。","实验数据表明，每次点击“复制QQ”按钮，宇宙幽默常数将提升0.73，为后续人机搞笑交互提供新范式。","亚洲伊斯坦布尔实验室纵向研究表明：同时担任初中高级工程师可使项目延期概率增加300%，但玄学满意度拉满。","本文提出了一种基于“假装努力”的对抗生成网络，实验证明在ddl前24小时可激发超常摸鱼潜力，p值 < 0.05。"];
-    function generateBullshit() { let r = bullshitPhrases[Math.floor(Math.random()*bullshitPhrases.length)]; document.getElementById('bullshitArea').innerHTML = `📖 “${r}” —— 摘自《赵宇轩·预印本》第${Math.floor(Math.random()*10)+1}卷`; showToast("🤯 学术废话已产出"); let score = parseInt(document.getElementById('impactScore').innerText); score = Math.min(100, score+1); document.getElementById('impactScore').innerText=score; document.getElementById('academicMeter').style.width=score+"%"; incAchieve('bullshitGen'); }
-    function randomStats() { let p=Math.floor(Math.random()*100), h=Math.floor(Math.random()*100), b=Math.floor(Math.random()*100); document.getElementById('prodVal').innerText=p; document.getElementById('humorVal').innerText=h; document.getElementById('boundVal').innerText=b; document.getElementById('prodFill').style.width=p+"%"; document.getElementById('humorFill').style.width=h+"%"; document.getElementById('boundFill').style.width=b+"%"; showToast(`📊 伪科学数据: ${p}% ${h}% ${b}%`); incAchieve('statRandom'); }
-    function initFilter() { let tags=document.querySelectorAll('.filter-tag'); tags.forEach(t=>t.addEventListener('click',()=>{ let f=t.getAttribute('data-filter'); buildProjectCards(f); tags.forEach(tt=>tt.classList.remove('active')); t.classList.add('active'); })); document.querySelector('.filter-tag[data-filter="all"]').classList.add('active'); }
-    function initCopyQQ() { document.getElementById('copyQQBtn').addEventListener('click',()=>{ navigator.clipboard.writeText('3939981629'); showToast("📎 复制QQ:3939981629"); incAchieve('qqCopy'); }); }
-    function initFakeReply() { document.getElementById('fakeReplyBtn').addEventListener('click',()=>{ let m=document.getElementById('msgInput').value.trim(); if(m) showToast(`🤖 赵宇轩分身：「${m} —— 说得对，但我选择加一个bug」`); else showToast("说点好听的嘛"); }); }
-    function initCrazyBtn() { document.getElementById('crazyBtn').addEventListener('click',()=>{ showToast("💥 触发『我超努力』效果：所有项目经验+10年，薪水翻倍（虚拟币）"); }); }
-    let bgIndex=0; const bgStyles=['linear-gradient(135deg, #f5f0ff 0%, #e8e0ff 100%)','linear-gradient(135deg, #ffe6f0, #ffd9e6)','linear-gradient(135deg, #d9f0ff, #b8e1fc)', '#1a1a2e radial-gradient(circle at 30% 20%, #2c3e50, #000000)'];
-    function switchBg() { bgIndex=(bgIndex+1)%bgStyles.length; document.body.style.background = bgStyles[bgIndex]; showToast(`🎨 背景模式切换 #${bgIndex+1}`); }
-    let bossMode=false;
-    function toggleBossMode() { bossMode=!bossMode; if(bossMode) { document.body.classList.add('boss-mode'); showToast("🤫 老板键已激活：敏感内容模糊化，摸鱼安全"); } else { document.body.classList.remove('boss-mode'); showToast("😎 恢复摸鱼宇宙真容"); } }
-    const fortunes=["🐟 宜：假装review代码，实则刷帖；忌：坐过道","🍵 今日摸鱼指数 Max，建议把键盘敲得震天响","📉 运势低迷：可能被cue回答问题，提前准备『这个bug我再看看』","🎉 鸿运当头：领导出差，全天自由呼吸","🧘 玄学建议：桌面开十个终端窗口，没人敢打扰"];
-    function genFortune() { let f=fortunes[Math.floor(Math.random()*fortunes.length)]; document.getElementById('fortuneText').innerHTML=`🔮 ${f}`; showToast("运势已降临"); }
-    
-    let votes = JSON.parse(localStorage.getItem('fishVotes')) || { option1:0, option2:0, option3:0, option4:0 };
-    const voteOptions = { option1:"侧脸深思状", option2:"紧盯屏幕皱眉", option3:"快速切换窗口", option4:"假装在开会" };
-    function renderVotes() { let total = Object.values(votes).reduce((a,b)=>a+b,0); let html=''; for(let [key,label] of Object.entries(voteOptions)) { let percent = total===0?0:(votes[key]/total*100); html+=`<div class="vote-option" data-key="${key}">${label} (${votes[key]}票)<div class="vote-bar" style="width:${percent}%"></div></div>`; } document.getElementById('voteContainer').innerHTML=html; document.querySelectorAll('.vote-option').forEach(el=>el.addEventListener('click',(e)=>{ let k=el.dataset.key; votes[k]++; localStorage.setItem('fishVotes',JSON.stringify(votes)); renderVotes(); showToast("投票成功！摸鱼界感谢您"); })); }
-    
-    // ================= 完整单词库 (原始300+词条恢复) =================
-    const FULL_WORD_RAW = `A\naccept 接受\naccessible 易接近的\naccompany 陪伴\naccount for 占比\naccurate 准确的\nachievement 成就\nactually 实际上\nadapt 适应\naddition 添加\naddress 地址\nadequate 足够的\nadjust 调整\nadministration 政府\nadmit 承认\nadopt 采用\nadvance 推进\nadventure 冒险\nadvertise 做广告\nadvocate 提倡\naffair 事件\naffect 影响\nagenda 议程\naid 援助\naim 目的\nalarm 警报\nallergic 过敏的\namazing 令人惊异的\nambition 雄心壮志\namusing 有趣的\nanger 愤怒\nangry 愤怒\nannoy 骚扰\nannoyed 生气\nannoying 烦人的\nanxiety 焦虑\nanxious 焦虑\napart 分开\napologize 道歉\napology 道歉\nappeal 上诉\nappearance 外观\napplication 应用程序\napply 应用\nappoint 任命\nappreciation 欣赏\nappreciate 欣赏\napproach 方法\narrange 安排\narrangement 安排\nashamed 羞愧\naside 一边\nassess 评估\nassist 协助\nassume 假设\nassure 保证\nastonish 使惊讶\nattempt 尝试\nattention 注意\nattitude 态度\nautomatic 自动\nautomatically 自动\navoid 避免\nawkward 尴尬的\nB\nban 禁止\nbehave 表现\nbelief 信仰\nbeneficial 有益的\nbenefit 利益\nbesides 此外\nblame 责备\nblank 空白\nborder 边境\nbrand 品牌\nbravery 勇敢\nbrief 短暂的\nbudget 预算\nburden 负担\nbutton 纽扣\nC\ncalculate 计算\ncase 情况\ncast 投\ncasually 随便\ncautious 谨慎的\ncharge 负责\nclarify 澄清\ncolleague 同事\ncomb 梳子\ncomment 评论\ncompany 公司\ncompare 比较\ncomparison 比较\ncompetitor 竞争对手\ncomplex 复杂的\ncomplicated 复杂化\nconcern 关注\nconcerned 关注的\nconcerning 有关\ncondition 条件\nconduct 实施\nconfirm 确认\nconfuse 混淆\nconfused 困惑的\nconfirmed 确认\nconsequently 因此\nconsequence 结果\nconsideration 考虑\ncontent 内容\ncontrast 对比\ncontribute 贡献\ncontribution 贡献\nconvenient 方便的\nconvincing 令人信服的\ncourse 课程\ncover 封面\ncrisis 危机\ncritical 关键的\ncure 治愈\ncuriosity 好奇心\ncurious 好奇的\ncurtain 窗帘\ncushion 垫子\ncustom 风俗\ncustoms 海关\nD\ndamage 损害\ndeal 交易\ndeal with 处理\ndebate 辩论\ndecline 下降\ndecrease 减少\ndeclare 声明\ndecorate 装修\ndefeat 失败\ndelight 高兴\ndelighted 高兴的\ndeliver 交付\ndemand 需求\ndeny 否认\ndeserve 值得\ndesire 欲望\ndespite 尽管\ndetermine 确定\ndetermined 坚定的\ndiagnose 诊断\ndiet 饮食\ndigest 消化\ndisappointing 令人失望的\ndisaster 灾难\ndistance 距离\ndistant 遥远的\ndistribute 分发\ndivide 分\ndonate 捐赠\ndrop 下降\nE\nearn 赚\nefficient 有效率的\neffort 努力\nencouragement 鼓励\nenthusiastic 热情的\nerupt 爆发\nevaluate 评估\neventually 最终\nexcite 兴奋\nexpand 膨胀\nexpectation 期望\nexpense 费用\nexperienced 有经验的\nexplore 探索\nexpose to 暴露于\nexpress 表达\nextreme 极端的\nextremely 极端的\nF\nfair 公平的\nfamiliar 熟悉的\nfavour 喜爱\nfilling 填充物\nfirm 公司\nfocus 焦点\nforbid 禁止\nforbidding 冷峻的\nforce 强迫\nforgive 原谅\nform 形式\nformal 正式的\nfortune 财富\nforward 向前\nfrequently 频繁地\nfrustration 挫折\nfundamental 基本的\nG\ngather 收集\ngenerally 一般地\ngenerous 慷慨的\ngentle 温柔的\nget away 离开\nget through 度过\ngive in 屈服\ngive way to 让步\ngiven 鉴于\ngovernment 政府\ngradually 逐渐地\ngrateful 感激的\nguidance 指导\nH\nharmful 有害的\nhesitate 犹豫\nhesitation 犹豫\nhide 隐藏\nhunt 打猎\nI\nidentify 识别\nidentity 身份\nignore 忽略\nillegal 非法的\nimagination 想象力\nimpact 影响\nimmediately 立即\nimpression 印象\nimpose 强加\nindependent 独立的\nindeed 的确\nineffective 无效的\ninevitable 不可避免的\ningredient 成分\ninitial 最初的\ninspiration 灵感\ninstead of 而不是\ninstruct 指导\nintelligent 聪明的\nintend 打算\nintention 意图\ninterrupt 中断\ninterview 面试\nintroduce 介绍\ninvest 投资\ninvitation 邀请\nJ\njob 工作\njudge 法官\nK\nkeep up 保持\nL\nlack 缺乏\nlast 最后的\nlawful 合法的\nlay 放置\nlimit 限制\nlonging 渴望\nloss 损失\nM\nmaintain 维护\nmake up 组成\nmanage 管理\nmatter 问题\nmean 意思是\nmeasure 测量\nmerely 仅仅是\nmethod 方法\nmidnight 半夜\nmisfortune 不幸\nmiss 错过\nmission 任务\nmodest 适度的\nmoreover 此外\nmovement 运动\nmoving 移动\nN\nnaturally 自然地\nnegotiate 谈判\nneglect 忽视\nniece 侄女\nnormal 正常的\nO\nobserve 观察\nobvious 明显的\noccasion 场合\noccasionally 偶尔\noccupation 占领\noccupy 占领\noccur 发生\non purpose 故意\noperation 手术\noperator 接线员\nopportunity 机会\norder 订单\notherwise 否则\nowe 欠\nP\npainful 痛苦的\npale 苍白的\npart 部分\npassion 激情\npassive 被动的\npatience 耐心\npay off 偿还\nperform 执行\npermission 许可\npermit 许可证\npersuade 说服\npick up 捡起\nplain 平原\npleased 高兴的\npocket 口袋\npolicy 政策\npositive 积极的\npossess 拥有\npost 帖子\npostpone 推迟\npractical 实用的\npraise 赞美\npredict 预测\npreparation 准备\nprepare 准备\npreserve 保存\npressure 压力\npretend 假装\nprevention 预防\npride 骄傲\nprinciple 原则\nprint 打印\npriority 优先权\nprivilege 特权\nprocedure 过程\nprocess 过程\nprofit 利润\nproject 项目\npromote 促进\nprotection 保护\npublic 公众的\npurpose 目的\nput forward 提出\nput into 使进入\nput off 推迟\nput up 建造\npuzzle 谜\nQ\nquit 辞职\nR\nrail 铁路\nraise 提高\nrandom 随机的\nrapidly 迅速地\nreact 反应\nreaction 反应\nreader 读者\nrecommend 推荐\nrecording 录音\nrecover 恢复\nrecovery 复苏\nrefer 提到\nrefer to 指的是\nrefuse 拒绝\nregardless 不顾\nregardless of 不管\nregister 注册\nregular 常规的\nregularly 定期\nreject 拒绝\nrelationship 关系\nrelative 相对的\nreliable 可靠的\nrelief 救济\nrelieved 感到宽慰的\nreligious 宗教的\nrely 依赖\nrely on 依靠\nremain 保持\nremote 遥远的\nremove 删除\nrepair 修复\nreplace 取代\nreply 回复\nreputation 声誉\nrequire 需要\nrescue 救援\nresistant 抵抗的\nrespect 尊重\nrespond 回应\nrest 休息\nreward 奖励\nridiculous 荒谬的\nroll 滚动\nroughly 粗糙地\nrunning 连续的\nS\nsales 销售额\nsatisfied 满意\nsaying 谚语\nscene 场景\nsecretly 秘密地\nseek 寻求\nselect 选择\nsensitive 敏感的\nseparation 分离\nseparately 分别地\nserious 严重的\nserve 服务\nservice 服务\nset off 出发\nsettle 解决\nsetting 设置\nsharp 锋利的\nshow up 出现\nsight 视线\nsignal 信号\nsimilarity 相似性\nsink 下沉\nsite 地点\nsituation 情况\nspoil 破坏\nspot 地点\nstare 凝视\nstate 状态\nsteady 稳定的\nsuffering 痛苦\nsuitable 合适的\nsupporting 支持的\nT\ntask 任务\nthreat 威胁\nthrill 激动\ntire 疲劳\ntiring 令人疲劳的\ntouch 触摸\ntreat 治疗\ntremble 颤抖\ntrust 信任\nturn into 变成\nU\nunique 独特的\nupsetting 令人心烦的\nurge 催促\nV\nview 视野\nW\nwallet 钱包\nwisdom 智慧\nwitness 见证\nempty 空的\norigin 起源\nsick 生病的\nquality 质量\nexperience 经验\nappointment 任命\ntemporarily 暂时\nmatch 匹配\nbother 麻烦\nrock 岩石\ndemanding 苛刻的\nrange 范围\ncampaign 运动\ndetail 细节\nartificial 人工\ncomfort 安慰\nexperiment 实验\nenergetic 精力充沛的\ninnocent 无辜的\nrecite 背诵\nestimate 估计\nboard 董事会\nurgent 紧急的\nbury 埋葬\nfortunate 幸运的\nrepeat 重复\nthus 因此\natmosphere 大气层\ncertain 某些\nescape 逃避\ndegree 学位\ntough 艰难的\nloose 宽松的\nsacrifice 牺牲\ncome across 遇到\nbrain 大脑\ndeveloped 发达的\nbeyond 超过\nabuse 滥用\nprivate 私人的\nevent 事件\ndeveloping 发展中的\nfrequent 频繁的\naware 意识到\ndirection 方向\nattract 吸引\nincrease 增加\nbeg 请求\nrisk 风险\nreference 参考\ndesign 设计\nnest 巢\ndiscourage 阻碍\ndefine 定义\nrecognize 识别\nprogress 进步\nwhisper 耳语\nreduce 减少\ncrash 碰撞\nexplode 爆炸\nmemory 内存\ndistinguish 区分\nregulation 法规\ndirectly 直接的\nattractive 有吸引力的\nexpose 暴露\nrequest 请求\ncontrary 相反\nabsence 缺席\nconsult 咨询\nin need of 需要\nevidence 证据\nclaim 索赔\nmotivation 动机\nrose 玫瑰\nlasting 持久的\nease 缓解\nreasonable 合理的\nfunction 功能\ndelay 延迟\nabandoned 被遗弃的\npromise 承诺\nabundant 丰富的\nperformance 性能\nstrike 罢工\nhard 努力的\ncontinue 继续\nconvince 说服\nnegative 消极的\naccent 口音\nabsorb 吸收\ndestination 目的地\nexplanation 解释\ncomplain 抱怨\nsuppose 猜想\nrecipe 烹饪法\nfantastic 很棒的\napplicant 申请人\nmidday 中午\nalley 小巷\ninstitution 公共机构\nsculpture 雕塑\naccuse 指控\nglove 手套\npowder 粉末\ninstrument 工具\nlantern 灯笼\nsession 一段时间\ncorporation 大公司\nkettle 水壶\npatent 专利\nairspace 领空\ndawn 黎明\naccount 账目\nstocking 长筒袜\ncompulsory 强制的\nmillimeter 毫米\ngale 强风\ncottage 郊外小屋\nstruggle 斗争\nradiation 放射物`;
-    
-    let currentLines = FULL_WORD_RAW.split('\n').filter(l=>l.trim()!=="");
-    function renderModalWordList() { let kw = document.getElementById('modalSearchInput').value.trim().toLowerCase(); let filtered = kw===""?currentLines:currentLines.filter(l=>l.toLowerCase().includes(kw)); let resDiv=document.getElementById('modalResults'); if(filtered.length===0) resDiv.innerHTML='<div>🔍 无匹配单词</div>'; else resDiv.innerText=filtered.join('\n'); document.getElementById('modalTotalCount').innerText=currentLines.length; document.getElementById('modalDisplayCount').innerHTML=kw?`匹配 "${kw}"`:'全部'; }
-    function saveModalToLocal() { localStorage.setItem('myWordListV2', JSON.stringify(currentLines)); }
-    function modalAddWord() { let en=document.getElementById('modalNewWordEn').value.trim(), zh=document.getElementById('modalNewWordZh').value.trim(); if(!en||!zh) { alert('完整填写'); return; } let newEntry=`${en} ${zh}`; let firstUpper=en.charAt(0).toUpperCase(); let headerIdx=-1; for(let i=0;i<currentLines.length;i++) if(/^[A-Z]$/.test(currentLines[i].trim())&&currentLines[i].trim()===firstUpper) { headerIdx=i; break; } if(headerIdx===-1) { for(let i=0;i<currentLines.length;i++) if(/^[A-Z]$/.test(currentLines[i].trim())&&currentLines[i].trim()>firstUpper) { headerIdx=i; break; } if(headerIdx===-1) headerIdx=currentLines.length; currentLines.splice(headerIdx,0,firstUpper); headerIdx++; } let insertIdx=headerIdx+1; while(insertIdx<currentLines.length && !/^[A-Z]$/.test(currentLines[insertIdx].trim()) && currentLines[insertIdx].split(' ')[0].localeCompare(en,undefined,{sensitivity:'base'})<0) insertIdx++; currentLines.splice(insertIdx,0,newEntry); document.getElementById('modalNewWordEn').value=''; document.getElementById('modalNewWordZh').value=''; saveModalToLocal(); renderModalWordList(); showToast(`✅ 添加单词: ${newEntry}`); }
-    function exportModalTxt() { let blob=new Blob([currentLines.join('\n')],{type:'text/plain'}); let a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`wordlist_${new Date().toISOString().slice(0,10)}.txt`; a.click(); URL.revokeObjectURL(a.href); showToast("导出成功"); }
-    function initWordModal() { const modal=document.getElementById('wordModal'); document.getElementById('openWordModalBtn').onclick=()=>{ modal.style.display='flex'; renderModalWordList(); }; document.getElementById('closeWordModalBtn').onclick=()=>modal.style.display='none'; window.onclick=e=>{ if(e.target===modal) modal.style.display='none'; }; document.getElementById('modalToggleAddBtn').onclick=()=>document.getElementById('modalAddPanel').style.display='block'; document.getElementById('modalCloseAddBtn').onclick=()=>document.getElementById('modalAddPanel').style.display='none'; document.getElementById('modalSaveWordBtn').onclick=modalAddWord; document.getElementById('modalResetBtn').onclick=()=>{ document.getElementById('modalSearchInput').value=''; renderModalWordList(); }; document.getElementById('modalExportBtn').onclick=exportModalTxt; document.getElementById('modalSearchInput').addEventListener('input',renderModalWordList); let saved=localStorage.getItem('myWordListV2'); if(saved){ let arr=JSON.parse(saved); if(arr.length) currentLines=arr; } renderModalWordList(); }
-    
-    buildProjectCards("all"); initFilter(); initCopyQQ(); initFakeReply(); initCrazyBtn(); document.getElementById('generateBullshitBtn').addEventListener('click',generateBullshit); document.getElementById('randomStatsBtn').addEventListener('click',randomStats); randomStats(); generateBullshit(); document.getElementById('genFortuneBtn').addEventListener('click',genFortune); document.getElementById('bgSwitchBtn').addEventListener('click',switchBg); document.getElementById('bossKeyBtn').addEventListener('click',toggleBossMode); renderVotes(); initWordModal(); loadAchievements(); 
-    function initTheme(){ const btn=document.getElementById('themeSwitcher'); const isDark=localStorage.getItem('theme')==='dark'; if(isDark) { document.body.classList.add('dark'); btn.innerText='☀️'; } btn.addEventListener('click',()=>{ document.body.classList.toggle('dark'); let nowDark=document.body.classList.contains('dark'); localStorage.setItem('theme',nowDark?'dark':'light'); btn.innerText=nowDark?'☀️':'🌙'; showToast(nowDark?"🌙 暗色模式+幽默翻倍":"☀️ 亮色模式"); incAchieve('themeToggle'); }); } initTheme();
-    document.getElementById('citeMeBtn').addEventListener('click',()=>{ navigator.clipboard.writeText(`@article{zhaoyuxuan2026, title={基于0个手法的无边界美学}, author={Zhao, Yuxuan}, journal={Journal of Humorous Computing}, year={2026} }`); showToast("📚 已复制 BibTeX 引用"); });
-    document.getElementById('clearAchieveBtn').addEventListener('click',()=>{ achievementCount={ bullshitGen:0,themeToggle:0,qqCopy:0,statRandom:0 }; localStorage.removeItem('achievements'); updateAchievements(); showToast("成就已重置，重新开始摸鱼人生"); });
+    // 项目数据
+    const projects = [
+        { title: "🍓 莓用的后台管理系统", desc: "登录页加载三圈才显示按钮，极致用户体验", tags: ["frontend", "design"] },
+        { title: "🎨 无边界美学生成器", desc: "生成一张完全空白的图片，售价$9.9", tags: ["design"] },
+        { title: "⚙️ 网页编辑器Pro", desc: "只能编辑<blink>标签，复古潮流", tags: ["frontend"] }
+    ];
+
+    function buildProjects(filter = "all") {
+        const container = document.getElementById('projectList');
+        let filtered = filter === "all" ? projects : projects.filter(p => p.tags.includes(filter));
+        container.innerHTML = filtered.map(p => `<div class="project-item"><div>${p.title}</div><div style="font-size:0.85rem">${p.desc}</div></div>`).join('');
+        document.querySelectorAll('.project-item').forEach(el => el.addEventListener('click', () => showToast("🏆 荣获『年度最没实用价值奖』，但创意满分")));
+    }
+
+    // 单词表数据（核心丰富——单词表不能少）
+    const wordsLibrary = [
+        { term: "Resilience", definition: "韧性 · 高考备考核心竞争力", category: "exam" },
+        { term: "Full Stack", definition: "全栈 · 能力无边界，就像考生各科均衡", category: "tech" },
+        { term: "Prototype", definition: "原型 · 每一次迭代都是进步", category: "tech" },
+        { term: "Grit", definition: "坚毅 · 通向成功的必经品质", category: "exam" },
+        { term: "Whimsical", definition: "异想天开 · 设计玄学核心要素", category: "design" },
+        { term: "MVP", definition: "最小可行产品 · 先完成再完美", category: "tech" },
+        { term: "Serendipity", definition: "意外好运 · 高考锦鲤词", category: "exam" },
+        { term: "Pixel Perfect", definition: "像素完美 · 设计师偏执浪漫", category: "design" },
+        { term: "Tech Stack", definition: "技术栈 · 多元化工具储备", category: "tech" },
+        { term: "Perseverance", definition: "持之以恒 · 献给深夜刷题的少年", category: "exam" },
+        { term: "Negative Space", definition: "留白 · 无边界美学真谛", category: "design" },
+        { term: "Deploy", definition: "部署 · 将努力上线成结果", category: "tech" }
+    ];
+
+    function buildWordList(filter = "all") {
+        const container = document.getElementById('wordListContainer');
+        let filtered = filter === "all" ? wordsLibrary : wordsLibrary.filter(w => w.category === filter);
+        container.innerHTML = filtered.map(w => `
+            <div class="word-item" data-term="${w.term}" data-def="${w.definition}">
+                <div class="word-term">${w.term}</div>
+                <div class="word-def">${w.definition}</div>
+            </div>
+        `).join('');
+        // 给每个单词添加点击复制事件
+        document.querySelectorAll('.word-item').forEach(el => {
+            el.addEventListener('click', (e) => {
+                const term = el.getAttribute('data-term');
+                const def = el.getAttribute('data-def');
+                const copyText = `${term} — ${def}`;
+                navigator.clipboard.writeText(copyText).then(() => {
+                    showToast(`📖 已复制单词: ${term} → ${def}`);
+                }).catch(() => showToast("复制失败，但记忆深刻"));
+            });
+        });
+    }
+
+    // 随机数据统计
+    function randomStats() {
+        const prod = Math.floor(Math.random() * 101);
+        const humor = Math.floor(Math.random() * 101);
+        const bound = Math.floor(Math.random() * 101);
+        document.getElementById('prodVal').innerText = prod;
+        document.getElementById('humorVal').innerText = humor;
+        document.getElementById('boundVal').innerText = bound;
+        document.getElementById('prodFill').style.width = prod + "%";
+        document.getElementById('humorFill').style.width = humor + "%";
+        document.getElementById('boundFill').style.width = bound + "%";
+    }
+
+    // 倒计时精准计算 (以2026年为基准)
+    function updateCountdowns() {
+        const now = new Date();
+        // 网站运行时间：以页面初次运行2025年初为假定起始，但这里统一从2026年1月1日0时算起更有意义 (展示稳定运行天数)
+        const siteStart = new Date(2026, 0, 1);
+        const runDaysDiff = Math.max(0, Math.floor((now - siteStart) / (1000 * 60 * 60 * 24)));
+        document.getElementById('runDays').innerText = runDaysDiff;
+
+        // 高考 2026年6月7日
+        const gaokaoDate = new Date(2026, 5, 7);
+        const diffGaokao = Math.ceil((gaokaoDate - now) / (1000 * 60 * 60 * 24));
+        document.getElementById('gaokaoDays').innerText = diffGaokao > 0 ? diffGaokao : 0;
+
+        // 中考 2026年6月15日（示例）
+        const zhongkaoDate = new Date(2026, 5, 15);
+        const diffZhongkao = Math.ceil((zhongkaoDate - now) / (1000 * 60 * 60 * 24));
+        document.getElementById('zhongkaoDays').innerText = diffZhongkao > 0 ? diffZhongkao : 0;
+
+        // 暑假 2026年7月1日
+        const summerDate = new Date(2026, 6, 1);
+        const diffSummer = Math.ceil((summerDate - now) / (1000 * 60 * 60 * 24));
+        document.getElementById('summerDays').innerText = diffSummer > 0 ? diffSummer : 0;
+    }
+
+    // 主题切换
+    function initTheme() {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') {
+            document.body.classList.add('dark');
+            document.getElementById('themeSwitcher').innerText = '☀️';
+        } else {
+            document.getElementById('themeSwitcher').innerText = '🌙';
+        }
+        document.getElementById('themeSwitcher').addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.getElementById('themeSwitcher').innerText = isDark ? '☀️' : '🌙';
+        });
+    }
+
+    // 筛选项目卡片
+    function bindProjectFilters() {
+        document.querySelectorAll('.filter-tag').forEach(t => {
+            t.addEventListener('click', (e) => {
+                const filterVal = t.getAttribute('data-filter');
+                buildProjects(filterVal);
+                document.querySelectorAll('.filter-tag').forEach(tt => tt.classList.remove('active'));
+                t.classList.add('active');
+            });
+        });
+        document.querySelector('.filter-tag').classList.add('active');
+        buildProjects('all');
+    }
+
+    // 单词表筛选独立
+    function bindWordFilters() {
+        const wordFilters = document.querySelectorAll('.word-filter-tag');
+        wordFilters.forEach(t => {
+            t.addEventListener('click', (e) => {
+                const filterVal = t.getAttribute('data-wordfilter');
+                buildWordList(filterVal);
+                wordFilters.forEach(ft => ft.classList.remove('active'));
+                t.classList.add('active');
+            });
+        });
+        buildWordList('all');
+    }
+
+    // 按钮与辅助
+    function bindButtons() {
+        document.getElementById('copyQQBtn').addEventListener('click', () => {
+            navigator.clipboard.writeText('3939981629');
+            showToast("📎 已复制QQ: 3939981629  祝考运昌隆");
+        });
+        document.getElementById('crazyBtn').addEventListener('click', () => {
+            showToast("💥 触发『我超努力』: 所有项目经验+10年，高考祝福值+∞");
+        });
+        document.getElementById('randomStatsBtn').addEventListener('click', randomStats);
+        const greetBtn = document.getElementById('greetingBtn');
+        if(greetBtn) {
+            greetBtn.addEventListener('click', () => {
+                const messages = ["🏅 旗开得胜，马到功成！超常发挥！", "🍀 考的全会，蒙的全对，状元附体", "✨ 心所致，梦必达，金榜有名", "📖 愿你合上笔盖的那一刻，有着战士收刀般的骄傲"];
+                const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+                showToast(`🎓 高考上上签: ${randomMsg}`);
+            });
+        }
+    }
+
+    // 初始化所有
+    function init() {
+        initTheme();
+        updateCountdowns();
+        setInterval(updateCountdowns, 1000 * 60 * 30); // 每30分钟刷新倒计时
+        bindProjectFilters();
+        bindWordFilters();
+        bindButtons();
+        randomStats(); // 初始随机数据
+    }
+
+    init();
 </script>
 </body>
 </html>
